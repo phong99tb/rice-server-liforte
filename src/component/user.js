@@ -46,7 +46,6 @@ const User = () => {
     }
 
     const deleteUser = async (id) => {
-        console.log(id);
         const response = await api.deleteUser(id);
         setMessApi(response)
     }
@@ -101,7 +100,7 @@ const User = () => {
         <div>
             <h1>Users</h1>
             <Button onClick={addUser}>Thêm người</Button>
-            <Table dataSource={users} columns={columns} />
+            <Table dataSource={users} columns={columns} scroll={{ y: `calc(100vh - 300px)` }} />
             <Modal title={statusModal === "edit" ? "Sửa" : "Thêm"} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
                 <Input
                     type="text"

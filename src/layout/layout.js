@@ -20,7 +20,7 @@ const Layout = () => {
                     {
                         menuList.map((item, index)=>{
                             return (
-                                <p className='menu__item' onClick={()=>selectMenu(index)} key={item} >{item}</p>
+                                <p className={'menu__item ' + (menuChoise===index?'menu__item--active':'') } onClick={()=>selectMenu(index)} key={item} >{item}</p>
                             )
                         })
                     }

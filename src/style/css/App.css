@@ -54,3 +54,6 @@
   cursor: pointer;
 }
 
+.menu__item--active {
+  background-color: #333A48;
+}
